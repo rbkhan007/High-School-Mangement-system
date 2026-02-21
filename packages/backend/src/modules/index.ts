@@ -1,0 +1,40 @@
+import { Router } from 'express';
+import authRoutes from './auth/auth.routes';
+import studentRoutes from './student/student.routes';
+import teacherRoutes from './teacher/teacher.routes';
+import classRoutes from './class/class.routes';
+import attendanceRoutes from './attendance/attendance.routes';
+import examRoutes from './exam/exam.routes';
+import noticeRoutes from './notice/notice.routes';
+import grievanceRoutes from './grievance/grievance.routes';
+import resourceRoutes from './resource/resource.routes';
+import feedbackRoutes from './feedback/feedback.routes';
+import adminRoutes from './admin/admin.routes';
+import scoutRoutes from './scout/scout.routes';
+import libraryRoutes from './library/library.routes';
+import assignmentRoutes from './assignment/assignment.routes';
+import submissionRoutes from './submission/submission.routes';
+import routineRoutes from './routine/routine.routes';
+import publicRoutes from './public/public.routes';
+
+const router = Router();
+
+router.use('/auth', authRoutes);
+router.use('/students', studentRoutes);
+router.use('/teachers', teacherRoutes);
+router.use('/classes', classRoutes);
+router.use('/attendance', attendanceRoutes);
+router.use('/exams', examRoutes);
+router.use('/notices', noticeRoutes);
+router.use('/grievances', grievanceRoutes);
+router.use('/resources', resourceRoutes);
+router.use('/feedback', feedbackRoutes);
+router.use('/admin', adminRoutes);
+router.use('/scouts', scoutRoutes);
+router.use('/library', libraryRoutes);
+router.use('/assignments', assignmentRoutes);
+router.use('/submissions', submissionRoutes);
+router.use('/routines', routineRoutes);
+router.use('/public', publicRoutes);
+
+export default router;

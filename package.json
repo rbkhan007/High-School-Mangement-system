@@ -1,0 +1,23 @@
+{
+  "name": "high-school-management-system",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Basudevpur High School Management System - Modular Monorepo",
+  "main": "index.js",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspaces --if-present",
+    "build": "npm run build --workspaces --if-present",
+    "start": "npm run start --workspaces --if-present",
+    "backend:dev": "npm run dev -w packages/backend",
+    "frontend:dev": "npm run dev -w packages/frontend",
+    "db:push": "npm run db:push -w packages/backend",
+    "db:generate": "npm run generate -w packages/backend",
+    "db:studio": "npm run db:studio -w packages/backend"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

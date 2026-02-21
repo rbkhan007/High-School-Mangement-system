@@ -1,0 +1,139 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Outfit", sans-serif;
+  --color-school-primary: #1e40af;
+  --color-school-secondary: #eab308;
+  --color-school-accent: #065f46;
+  --color-school-background: #f8fafc;
+  --color-school-surface: #ffffff;
+  --color-school-error: #dc2626;
+  --color-school-success: #16a34a;
+
+  --shadow-3d: 0 4px 0 0 rgba(0, 0, 0, 0.2);
+  --shadow-3d-hover: 0 2px 0 0 rgba(0, 0, 0, 0.2);
+  --shadow-3d-active: none;
+
+  --animate-float: float 3s ease-in-out infinite;
+
+  @keyframes float {
+
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+}
+
+:root {
+  --font-primary: 'Outfit', sans-serif;
+  --glass-bg: rgba(255, 255, 255, 0.7);
+  --glass-border: rgba(255, 255, 255, 0.2);
+  --text-active: #0f172a;
+  --text-muted: #64748b;
+}
+
+[data-theme='dark'] {
+  --glass-bg: rgba(15, 23, 42, 0.7);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --text-active: #f8fafc;
+  --text-muted: #94a3b8;
+}
+
+* {
+  font-family: var(--font-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-behavior: smooth;
+  text-size-adjust: 100%;
+}
+
+body {
+  @apply bg-school-background text-slate-800 min-h-[100dvh] overflow-x-hidden;
+  touch-action: manipulation;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+@utility btn-3d {
+  @apply relative px-6 py-3 font-semibold text-white transition-all transform rounded-xl;
+  box-shadow: 0 4px 0 0 rgba(0, 0, 0, 0.2);
+
+  &:active {
+    @apply translate-y-1 shadow-3d-active;
+  }
+}
+
+@utility btn-3d-primary {
+  @apply btn-3d bg-school-primary hover:bg-blue-700 shadow-blue-800/50;
+}
+
+@utility btn-3d-secondary {
+  @apply btn-3d bg-school-secondary hover:bg-yellow-600 shadow-yellow-700/50;
+}
+
+@utility glass-card {
+  @apply bg-white/80 backdrop-blur-md border border-white/40 rounded-3xl shadow-2xl;
+}
+
+@utility input-3d {
+  @apply w-full px-4 py-3 rounded-2xl border-2 border-slate-200 transition-all outline-none bg-white/60;
+
+  &:focus {
+    @apply border-school-primary ring-4 ring-school-primary/10;
+  }
+}
+
+@utility nav-link-3d {
+  @apply px-4 py-2 rounded-xl transition-all font-medium;
+
+  &:hover {
+    @apply bg-school-primary/10 text-school-primary;
+  }
+}
+
+/* Custom 3D Background */
+.bg-mesh {
+  background-color: #f8fafc;
+  background-image:
+    radial-gradient(at 0% 0%, rgba(30, 64, 175, 0.05) 0px, transparent 50%),
+    radial-gradient(at 100% 0%, rgba(234, 179, 8, 0.05) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, rgba(6, 95, 70, 0.05) 0px, transparent 50%),
+    radial-gradient(at 0% 100%, rgba(30, 64, 175, 0.05) 0px, transparent 50%);
+}
+
+.floating {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-20px) rotate(1deg);
+  }
+
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+}
