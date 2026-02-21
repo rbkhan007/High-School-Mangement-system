@@ -121,4 +121,4 @@ For inquiries, custom solutions, or professional collaborations:
 - 📞 **Phone**: [+880 1774-471120](tel:+8801774471120)
 - ✉️ **Email**: [rbkhan00009@gmail.com](mailto:rbkhan00009@gmail.com)
 
-**High School Management System Built for Basudebpur.**
+**High School Management System Built for Basudebpur High School .**
