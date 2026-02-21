@@ -114,6 +114,9 @@ If you see the error `Cannot find module 'pm2' or its corresponding type declara
 
 This system was proudly built by **MD. Rakibul Hasan**.
 
+If you'd like to support the development of this project, consider buying me a coffee! ☕
+<a href="https://www.buymeacoffee.com/rbkhan007" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 50px !important;width: 200px !important;" ></a>
+
 For inquiries, custom solutions, or professional collaborations:
 
 - 📞 **Phone**: [+880 1774-471120](tel:+8801774471120)
