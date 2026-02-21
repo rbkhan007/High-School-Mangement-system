@@ -116,6 +116,10 @@ This system was proudly built by **MD. Rakibul Hasan**.
 
 ☕ **Support My Work**: If you found this project helpful, consider leaving a tip via **Bkash: +880 1774-471120**.
 
+<p align="left">
+  <img src="./bkash-qr.png" alt="Bkash QR Code" width="250" />
+</p>
+
 For inquiries, custom solutions, or professional collaborations:
 
 - 📞 **Phone**: [+880 1774-471120](tel:+8801774471120)
