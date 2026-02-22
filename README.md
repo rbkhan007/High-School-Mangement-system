@@ -61,6 +61,11 @@ Run `npm install` and `npm run dev` in both `packages/backend` and `packages/fro
 Built by **MD. Rakibul Hasan** for Basudebpur High School.
 
 ☕ **Support My Work**: Bkash: **+880 1774-471120**.
+
+<p align="left">
+  <img src="./bkash-qr.png" alt="Bkash QR Code" width="250" />
+</p>
+
 - 📞 **Phone**: [+880 1774-471120](tel:+8801774471120)
 - ✉️ **Email**: [rbkhan00009@gmail.com](mailto:rbkhan00009@gmail.com)
 
