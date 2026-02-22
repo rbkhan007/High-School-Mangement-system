@@ -16,6 +16,7 @@ import assignmentRoutes from './assignment/assignment.routes';
 import submissionRoutes from './submission/submission.routes';
 import routineRoutes from './routine/routine.routes';
 import publicRoutes from './public/public.routes';
+import parentRoutes from './parent/parent.routes';
 
 const router = Router();
 
@@ -36,5 +37,6 @@ router.use('/assignments', assignmentRoutes);
 router.use('/submissions', submissionRoutes);
 router.use('/routines', routineRoutes);
 router.use('/public', publicRoutes);
+router.use('/parent', parentRoutes);
 
 export default router;

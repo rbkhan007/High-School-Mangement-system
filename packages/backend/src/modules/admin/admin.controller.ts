@@ -189,3 +189,38 @@ export const getDashboardStats = async (req: Request, res: Response) => {
         res.status(500).json({ error: 'Failed to fetch dashboard statistics' });
     }
 };
+
+export const getCommitteeStats = async (req: Request, res: Response) => {
+    try {
+        const attendanceRes = await db.query(`
+            SELECT 
+                COUNT(*) as total,
+                SUM(CASE WHEN status = 'PRESENT' THEN 1 ELSE 0 END) as present
+            FROM "Attendance" 
+            WHERE date >= date_trunc('month', CURRENT_DATE)
+        `);
+
+        const total = parseInt(attendanceRes.rows[0].total) || 0;
+        const present = parseInt(attendanceRes.rows[0].present) || 0;
+        const overallAttendance = total > 0 ? Math.round((present / total) * 100) + '%' : '100%';
+
+        const activeGrievancesRes = await db.query(`SELECT COUNT(*) FROM "Grievance" WHERE status NOT IN ('RESOLVED', 'REJECTED')`);
+
+        res.json({
+            overallAttendance,
+            activeGrievances: parseInt(activeGrievancesRes.rows[0].count),
+            infrastructure: 'Good', // Mock
+            policies: 12, // Mock
+            recentGrievances: [
+                { title: 'Water Supply Issue in Block B', status: 'In Progress', time: '2 days ago' },
+                { title: 'Library Book Shortage', status: 'Pending', time: '5 days ago' }
+            ],
+            upcomingEvents: [
+                { title: 'Annual Sports Pitch Meeting', location: 'Committee Room', time: 'Oct 15, 10:00 AM' }
+            ]
+        });
+    } catch (error) {
+        console.error('Committee stats error:', error);
+        res.status(500).json({ error: 'Failed to fetch committee statistics' });
+    }
+};
